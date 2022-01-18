@@ -1,6 +1,6 @@
 {
-  "name": "dumi-ui-test-site",
-  "version": "1.0.4",
+  "name": "@xiumubai/wood-ui",
+  "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -13,10 +13,10 @@
     "prepublishOnly": "npm run build"
   },
   "description": "桌面和移动端react组件库",
-  "homepage": "https://github.com/xiumubai/dumi-ui-site",
-  "repository": "https://github.com/xiumubai/dumi-ui-site",
+  "homepage": "https://github.com/xiumubai/wood-ui",
+  "repository": "https://github.com/xiumubai/wood-ui",
   "bugs": {
-    "url": "https://github.com/xiumubai/dumi-ui-site/issues"
+    "url": "https://github.com/xiumubai/wood-ui/issues"
   },
   "keywords": [
     "react",

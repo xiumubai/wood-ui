@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Block } from 'dumi-ui-test-site';
+import { Button, Block } from 'wood-ui';
 
 export default function App() {
   return (
