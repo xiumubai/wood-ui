@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Block } from 'wood-ui';
+import { Button, Block } from '@xiumu/wood-ui';
 
 export default function App() {
   return (

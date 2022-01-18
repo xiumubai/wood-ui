@@ -1,5 +1,5 @@
 {
-  "name": "@xiumubai/wood-ui",
+  "name": "@xiumu/wood-ui",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
