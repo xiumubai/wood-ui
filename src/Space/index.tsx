@@ -118,6 +118,7 @@ const Space: React.FC<SpaceProps> = ((props) => {
     [size]
   );
 
+  // 默认不传align为center
   const mergedAlign = align === undefined && direction === 'horizontal' ? 'center' : align;
   const marginDirection = 'marginRight';
 
