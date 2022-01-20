@@ -3,6 +3,7 @@ title: Demo 测试组件
 order: 1
 group:
   title: 基础组件
+  order: 0
 nav:
   title: '组件'
   path: /components

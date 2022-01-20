@@ -1,9 +1,9 @@
 ---
-title: Block 布局块
+title: Spin 加载中
 order: 0
 group:
-  title: 布局组件
-  order: 1
+  title: 操作反馈
+  order: 2
 nav:
   title: '组件'
   path: /components
@@ -11,6 +11,6 @@ nav:
 
 ## Demo
 
-<code src="../../demo/Block/index.jsx"></code>
+<code src="../../demo/Spin/index.jsx"></code>
 
 <API src="./index.tsx"></API>

@@ -3,6 +3,7 @@ title: Space 间距
 order: 1
 group:
   title: 布局组件
+  order: 1
 nav:
   title: '组件'
   path: /components
