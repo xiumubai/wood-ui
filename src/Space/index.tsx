@@ -70,7 +70,7 @@ type SpaceProps = {
   /** 间距方向 */
   direction?: 'horizontal' | 'vertical';
   /** 对齐方式 */
-  align?: Align;
+  align: Align;
   /** 设置拆分 */
   split?: React.ReactNode;
   /** 是否自动换行，仅在 horizontal 时有效 */

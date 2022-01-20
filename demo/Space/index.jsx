@@ -40,7 +40,7 @@ export default function App() {
       </Block>
 
       <Block title="自动换行">
-        <Space wrap>
+        <Space wrap size={[8, 16]}>
           <Button>button</Button>
           <Button type="primary">primary</Button>
           <Button>button</Button>
