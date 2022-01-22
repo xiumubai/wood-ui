@@ -92,6 +92,30 @@ export default function App() {
           </Button>
         </Space>
       </Block>
+
+      <Block title="防止重复click">
+        <Space wrap>
+          <Button
+            active
+            wait
+            onClick={() => {
+              console.log(1);
+            }}
+          >
+            1s内点一次
+          </Button>
+
+          <Button
+            active
+            wait={2000}
+            onClick={() => {
+              console.log(2);
+            }}
+          >
+            2s内点一次
+          </Button>
+        </Space>
+      </Block>
     </>
   );
 }

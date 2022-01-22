@@ -4,6 +4,9 @@ import clsx from 'clsx';
 import * as vars from '../styles/vars';
 import { isMobile } from '../utils/dom';
 import { getThemeColorCss } from '../styles/themeHelper';
+import Spin from '../Spin';
+import Space from '../Space';
+
 type Props = {
   /** default 线框，primary 实色框 */
   type?: 'default' | 'primary';
@@ -169,38 +172,42 @@ const Button = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     ...rest
   } = props;
 
-  // const [waiting, setWaiting] = useState(false);
+  const [waiting, setWaiting] = useState(false);
+  const [isClick, setIsClick] = useState(disabled);
 
-  // const waitTime =
-  //   typeof wait === 'number' && wait >　０
-  //     ? wait
-  //     : typeof wait === 'boolean' && wait === true
-  //     ? 1000
-  //     : 0;
-  // const usingWait = waitTime > 0;
+  const waitTime =
+    typeof wait === 'number' && wait > 0
+      ? wait
+      : typeof wait === 'boolean' && wait === true
+      ? 1000
+      : 0;
 
-  // const icon = props.icon || (loading || waiting ? 1 : null);
+  const usingWait = waitTime > 0;
+
+  const icon = props.icon || (loading || waiting ? <Spin /> : null);
 
   return (
     <StyledButton
       {...rest}
       ref={ref}
-      disabled={disabled}
+      disabled={isClick}
       type={htmlType}
-      // onClick={(e) => {
-      //   onClick?.(e);
-      //   if (typeof onClick === 'function' && usingWait) {
-      //     setWaiting(true);
-      //     setTimeout(() =>{
-      //       setWaiting(false);
-      //     }, waitTime)
-      //   }
-      // }}
+      onClick={(e: React.SyntheticEvent<Element, Event>) => {
+        onClick?.(e);
+        if (typeof onClick === 'function' && usingWait) {
+          setWaiting(true);
+          setIsClick(true);
+          setTimeout(() => {
+            setWaiting(false);
+            setIsClick(false);
+          }, waitTime);
+        }
+      }}
       className={clsx(
         'uc-btn',
         type,
         {
-          disabled: disabled || loading,
+          disabled: isClick || loading,
           block: block,
           danger: danger,
           circle: circle,
@@ -213,7 +220,10 @@ const Button = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         className,
       )}
     >
-      {children}
+      <Space align="baseline">
+        {icon}
+        {children}
+      </Space>
     </StyledButton>
   );
 });
