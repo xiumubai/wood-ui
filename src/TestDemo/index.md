@@ -1,6 +1,6 @@
 ---
-title: Demo Demo组件
-order: 20
+title: TestDemo 测试组件
+order: 21
 group:
   title: 基础组件
   order: 0
@@ -9,8 +9,8 @@ nav:
   path: /components
 ---
 
-## Demo
+## TestDemo
 
-<code src="../../demo/Demo/index.jsx"></code>
+<code src="../../demo/TestDemo/index.jsx"></code>
 
 <API src="./index.tsx"></API>
