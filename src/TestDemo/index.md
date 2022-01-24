@@ -2,7 +2,7 @@
 title: TestDemo 测试组件
 order: 21
 group:
-  title: 基础组件
+  title: 测试组件
   order: 0
 nav:
   title: '组件'
