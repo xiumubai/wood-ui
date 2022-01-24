@@ -7,6 +7,7 @@ export default function App() {
       <Block title="基础按钮">
         <Space>
           <Button>Default</Button>
+          <Button disabled type="primary">disabled</Button>
           <Button active>Outline</Button>
           <Button danger>Danger</Button>
           <Button type="primary">Primary</Button>
