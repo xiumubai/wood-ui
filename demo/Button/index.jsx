@@ -5,7 +5,7 @@ export default function App() {
   return (
     <>
       <Block title="基础按钮">
-        <Space>
+        <Space wrap>
           <Button>Default</Button>
           <Button disabled type="primary">disabled</Button>
           <Button active>Outline</Button>
@@ -70,7 +70,7 @@ export default function App() {
       </Block>
 
       <Block title="按钮形状">
-        <Space>
+        <Space wrap>
           <Button>Default Button</Button>
           <Button style={{ borderRadius: 20 }}>Rounded Button</Button>
           <Button style={{ borderRadius: 0 }}>Rect Button</Button>

@@ -120,7 +120,6 @@ const StyledButton = styled.button`
   &.disabled:active {
     cursor: not-allowed;
     opacity: 0.6;
-    pointer-events: none;
   }
 
   &.block {
