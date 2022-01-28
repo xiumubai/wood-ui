@@ -1,7 +1,7 @@
 ---
 hero:
-  title: wood-ui
-  desc: wood-ui site example
+  title: Wood UI
+  desc: Wood UI site
   actions:
     - text: Getting Started
       link: /components/guide
@@ -18,4 +18,4 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## Hello wood-ui!
+## Hello Wood UI!
