@@ -4,7 +4,9 @@ import { Demo } from '@xiumu/wood-ui';
 export default function App() {
   return (
     <>
-      <Demo title="First Demo" />
+      <Demo>
+        <h1>this is a demo!</h1>
+      </Demo>
     </>
   );
 }
