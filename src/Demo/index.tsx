@@ -3,9 +3,17 @@ import clsx from 'clsx';
 import styled from 'styled-components';
 
 type Props = {
-  /** 标题 */
-  title?: string;
+  /**
+   * @description       自定义className
+   * @description.zh-CN 自定义className
+   * @default           null
+   */
   className?: string;
+  /**
+   * @description       自定义style
+   * @description.zh-CN 自定义style
+   * @default           null
+   */
   style?: React.CSSProperties;
   children?: React.ReactNode;
 };

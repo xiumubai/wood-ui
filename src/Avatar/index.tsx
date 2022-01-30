@@ -4,11 +4,27 @@ import styled from 'styled-components';
 import Icon from '../Icon';
 
 type Props = {
-  /** 默认尺寸，默认40px */
+  /**
+   * @description       尺寸
+   * @description.zh-CN 尺寸
+   * @default           40px
+   */
   size?: number;
-  /** 形状，默认circle */
+  /**
+   * @description       形状
+   * @description.zh-CN 形状
+   * @default           circle
+   */
   shape?: 'circle' | 'square';
+  /**
+   * @description       自定义className
+   * @description.zh-CN 自定义className
+   */
   className?: string;
+  /**
+   * @description       自定义style
+   * @description.zh-CN 自定义style
+   */
   style?: React.CSSProperties;
   children?: React.ReactNode;
 };
@@ -47,7 +63,7 @@ const StyledAvatar = styled.div`
 
 const Avatar = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { size = 40, shape = 'circle', style, className, children, ...rest } = props;
-  const s  = { width: size, height: size, fontSize: size * 0.6, ...style};
+  const s = { width: size, height: size, fontSize: size * 0.6, ...style};
   return (
     <StyledAvatar
       className={(clsx('uc-avatar', className, shape))}

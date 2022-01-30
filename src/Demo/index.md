@@ -1,5 +1,5 @@
 ---
-title: Demo Demo组件
+title: Demo 测试组件
 order: 20
 group:
   title: 测试组件

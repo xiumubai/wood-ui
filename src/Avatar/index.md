@@ -1,6 +1,7 @@
 ---
 title: Avatar 头像
 order: 2
+mobile: true
 group:
   title: 基础组件
   order: 0
@@ -13,4 +14,6 @@ nav:
 
 <code src="../../demo/Avatar/index.jsx"></code>
 
-<API src="./index.tsx"></API>
+## props
+
+<API hideTitle src="./index.tsx"></API>
