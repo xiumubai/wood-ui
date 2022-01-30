@@ -5,13 +5,14 @@ import { toArray } from '../utils/index';
 import { detectFlexGapSupported } from '../utils/dom';
 
 type ItemProps = {
-  className?: string;
-  children?: React.ReactNode;
   index: number;
   direction?: 'horizontal' | 'vertical';
   marginDirection: 'marginLeft' | 'marginRight';
   split?: React.ReactNode;
   wrap?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  children?: React.ReactNode;
 };
 
 function SpaceItem({
@@ -63,18 +64,49 @@ function SpaceItem({
 type Align = 'center' | 'flex-start' | 'flex-end' | 'baseline';
 
 type SpaceProps = {
-  className?: string;
-  style?: React.CSSProperties;
-  /** 间距大小 */
+
+  /**
+   * @description       间距大小
+   * @description.zh-CN 间距大小
+   * @default           8px
+   */
   size?: number | [number, number];
   /** 间距方向 */
+  /**
+   * @description       间距方向
+   * @description.zh-CN 间距方向
+   * @default           horizontal
+   */
   direction?: 'horizontal' | 'vertical';
   /** 对齐方式 */
+  /**
+   * @description       对齐方式
+   * @description.zh-CN 对齐方式
+   * @default           center
+   */
   align: Align;
-  /** 设置拆分 */
+  /**
+   * @description       设置拆分，可以自定义react元素
+   * @description.zh-CN 设置拆分，可以自定义react元素
+   * @default           React.ReactNode
+   */
   split?: React.ReactNode;
-  /** 是否自动换行，仅在 horizontal 时有效 */
+  /**
+   * @description       是否自动换行，仅在 horizontal 时有效
+   * @description.zh-CN 是否自动换行，仅在 horizontal 时有效
+   * @default           false
+   */
   wrap?: boolean;
+  /**
+   * @description       自定义className
+   * @description.zh-CN 自定义className
+   */
+  className?: string;
+  /**
+   * @description       自定义style
+   * @description.zh-CN 自定义style
+   */
+  style?: React.CSSProperties;
 };
 
 const flexDirectionMap = {

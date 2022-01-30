@@ -24,4 +24,7 @@ nav:
 
 <code src="../../demo/Space/index.jsx"></code>
 
-<API src="./index.tsx"></API>
+## Props
+
+<API hideTitle src="./index.tsx"></API>
+
