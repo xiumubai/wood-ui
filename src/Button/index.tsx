@@ -8,39 +8,118 @@ import Spin from '../Spin';
 import Space from '../Space';
 
 type Props = {
-  /** default 线框，primary 实色框 */
+  /**
+   * @description       默认主题，default 线框，primary 实色框
+   * @description.zh-CN 间距大小
+   * @default           default
+   */
   type?: 'default' | 'primary';
-  /** 线框使用主题色 */
+
+  /**
+   * @description       线框使用主题色
+   * @description.zh-CN 线框使用主题色
+   * @default           false
+   */
   active?: boolean;
-  /** 禁用 */
+
+  /**
+   * @description       禁用
+   * @description.zh-CN 禁用
+   * @default           false
+   */
   disabled?: boolean;
-  /** 自定义style */
-  style?: React.CSSProperties;
-  /** 按钮类型 */
+
+  /**
+   * @description       按钮类型
+   * @description.zh-CN 按钮类型
+   * @default           undefined
+   */
   htmlType?: 'submit' | 'reset' | 'button' | undefined;
-  /** 块级按钮 */
+
+  /**
+   * @description       块级按钮
+   * @description.zh-CN 块级按钮
+   * @default           false
+   */
   block?: boolean;
-  children?: React.ReactNode;
-  /** 自定义className */
-  className?: string;
-  /** 圆形按钮 */
+
+  /**
+   * @description       圆形按钮
+   * @description.zh-CN 圆形按钮
+   * @default           false
+   */
   circle?: boolean;
-  /** 虚线边 */
+
+  /**
+   * @description       虚线边
+   * @description.zh-CN 虚线边
+   * @default           false
+   */
   dashed?: boolean;
-  /** 设置危险按钮 */
+
+  /**
+   * @description       设置危险按钮
+   * @description.zh-CN 设置危险按钮
+   * @default           false
+   */
   danger?: boolean;
-  /** 设置为展示的标签，比如div,a,button */
+
+  /**
+   * @description       设置为展示的标签，比如div,a,button
+   * @description.zh-CN 设置为展示的标签，比如div,a,button
+   * @default           null
+   */
   as?: any;
-  /** 设置按钮的图标组件 */
+
+  /**
+   * @description       设置按钮的图标组件
+   * @description.zh-CN 设置按钮的图标组件
+   * @default           null
+   */
   icon?: React.ReactNode;
-  /** 设置按钮加载状态 */
+
+  /**
+   * @description       设置按钮加载状态
+   * @description.zh-CN 设置按钮加载状态
+   * @default           false
+   */
   loading?: boolean;
-  /** 是否幽灵按钮 */
+
+  /**
+   * @description       是否幽灵按钮
+   * @description.zh-CN 是否幽灵按钮
+   * @default           false
+   */
   ghost?: boolean;
-  /** 点击回调 */
+
+  /**
+   * @description       点击后，下次能点击的时间间隔，防止重复点击, 如果是true, 间隔默认是1s
+   * @description.zh-CN 点击后，下次能点击的时间间隔，防止重复点击, 如果是true, 间隔默认是1s
+   * @default           1000ms
+   */
+   wait?: number | boolean;
+
+  /**
+   * @description       点击回调
+   * @description.zh-CN 点击回调
+   * @default           --
+   */
   onClick?: (e: React.SyntheticEvent) => void;
-  /** 点击后，下次能点击的时间间隔，防止重复点击, 如果是true, 间隔默认是1s  */
-  wait?: number | boolean;
+
+  /**
+   * @description       自定义className
+   * @description.zh-CN 自定义className
+   * @default           null
+   */
+  className?: string;
+
+  /**
+   * @description       自定义style
+   * @description.zh-CN 自定义style
+   * @default           null
+   */
+  style?: React.CSSProperties;
+  children?: React.ReactNode;
 };
 
 const StyledButton = styled.button`
@@ -154,7 +233,6 @@ const StyledButton = styled.button`
 `;
 const Button = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
-    children,
     type = 'default',
     disabled,
     block,
@@ -168,6 +246,7 @@ const Button = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     htmlType,
     onClick,
     wait,
+    children,
     ...rest
   } = props;
 
