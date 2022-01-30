@@ -2,16 +2,42 @@ import React, { HTMLAttributes } from 'react';
 import styled from 'styled-components';
 
 type Props = {
-  /** 标题 */
+  /**
+   * @description       标题
+   * @description.zh-CN 标题
+   * @default           无
+   */
   title?: string;
-  /** 内边距 */
+  /**
+   * @description       内边距
+   * @description.zh-CN 内边距
+   * @default           12px
+   */
   padding?: string;
-  /** 背景颜色 */
+  /**
+   * @description       背景颜色
+   * @description.zh-CN 背景颜色
+   * @default           40px
+   */
   background?: string;
-  /** 边框 */
+  /**
+   * @description       边框
+   * @description.zh-CN 边框
+   * @default           null
+   */
   border?: string;
-  /** 高度 */
+  /**
+   * @description       高度
+   * @description.zh-CN 高度
+   * @default           null
+   */
   height?: string;
+  /**
+   * @description       自定义样式
+   * @description.zh-CN 自定义样式
+   * @default           无
+   */
+  style?: React.CSSProperties;
   children?: React.ReactNode;
 };
 
@@ -32,7 +58,7 @@ const StyledBlock = styled.div`
 `;
 
 const Block = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { title, padding = '12px', background = '#fff', border, height, children, ...rest } = props;
+  const { title, padding = '12px', background = '#fff', border, height, style, children, ...rest } = props;
 
   return (
     <StyledBlock {...rest}>
@@ -44,6 +70,7 @@ const Block = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           background,
           border,
           height,
+          ...style
         }}
       >
         {children}
