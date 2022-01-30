@@ -4,10 +4,10 @@ import clsx from 'clsx';
 import { loadResource, isBrowser } from '../utils/dom';
 
 type Props = {
-  className?: string;
-  style?: React.CSSProperties;
   /** 图标类型 */
   type: string;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 const StyledIcon = styled.span`
@@ -38,10 +38,10 @@ const Icon: React.ForwardRefExoticComponent<Props> & {
    */
   loadFromIconfontCN?: (scriptUrl: string) => void;
 } = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { type, className, ...rest } = props;
+  const { type, className, style, ...rest } = props;
 
   return (
-    <StyledIcon {...rest} ref={ref} className={clsx('uc-icon', className, type)}>
+    <StyledIcon {...rest} ref={ref} style={{fontSize: '20px', ...style}} className={clsx('uc-icon', className, type)}>
       <svg {...SVGProps}>
         <use xlinkHref={`#${type}`} />
       </svg>
