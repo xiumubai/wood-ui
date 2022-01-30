@@ -12,7 +12,7 @@ nav:
 
 ## 组件列表
 
-#### 基础组件
+#### 1. 基础组件
 
 - Button (按钮)
 - Mask (遮罩)
@@ -22,7 +22,7 @@ nav:
 - Avatar (头像)
 - Icon (图标,包含加载在 iconfont.cn 上自行管理的图标)
 
-#### 操作反馈
+#### 2. 操作反馈
 
 - Drawer (抽屉)
 - Modal (弹框)
@@ -42,14 +42,14 @@ nav:
 - Spin（加载中指示器）
 - ScrollTop (平滑滚动到顶部)
 
-#### 导航组件
+#### 3. 导航组件
 
 - Tabs (选项卡切换)
 - Affix (将页面元素钉在可视范围)
 - Steps (步骤条)
 - PopMenu (弹出菜单)
 
-### 数据录入
+### 4. 数据录入
 
 - Checkbox (复选框)
 - CheckboxGroup (复选框列表)
@@ -68,7 +68,7 @@ nav:
 - DatePicker (移动端日期选择)
 - Calendar (移动端日历)
 
-### 数据展示
+### 5. 数据展示
 
 - Cell（列表项，多用于移动端,可以和 input/textarea 组合使用）
 - Badge (徽标)
@@ -83,12 +83,12 @@ nav:
 - NoticeBar (通告栏)
 - NoticeList (多条信息垂直滚动通知栏)
 
-### 动画/过渡
+### 6. 动画/过渡
 
 - TransitionElement (给子元素添加出场过渡效果,出场包含 1.元素初次加载并可见 2.元素从不可见到可见的状态变化)
 - AnimationElement(元素应用 animation 动画,和 TransitionElement 一样，只有在元素出现在视口才会执行动画,属性参照 css animation,也可以和 animate.css 配合使用,参考 https://animate.style/#usage using `@keyframes`)
 
-### 其他组件
+### 7. 其他组件
 
 - ThemeProvider (全局主题色配置)
 - LazyLoadElement（懒加载组件,在视口才渲染 children,不在则显示占位元素）
@@ -98,7 +98,7 @@ nav:
 - Waypoint （可见/不可见指示）
 - AutoCenter (自动居中)
 
-### 工具函数
+### 8. 工具函数
 
 - debounce (防抖)
 - throttle (节流)
@@ -106,12 +106,12 @@ nav:
 - observe (使用 IntersectionObserver 监视 dom 元素在文档视口的可见性)
 - unobserve (取消 observe 监控)
 
-### 常量
+### 9. 常量
 
 - isBrowser(是否是浏览器)
 - isMobile (是否是移动端)
 
-### Hooks
+### 10. Hooks
 
 - useUpdateEffect (执行异步更新 effect)
 - useUpdateLayoutEffect (执行同步更新 effect)
