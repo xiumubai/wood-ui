@@ -54,51 +54,6 @@ export const isBrowser = !!(typeof window !== 'undefined' && window);
 /** 是否是移动端 */
 export const isMobile = isBrowser && /(iPhone|iPad|iPod|iOS|android)/i.test(navigator.userAgent);
 
-/**
- *
- * 判断是否支持某个css属性
- * @param {string} prop
- * @return {*}  {boolean}
- */
-export const isSupportStyleProp = (prop: string): boolean => {
-  return prop && prop in document.documentElement.style;
-};
-/**
- * 判断是否支持某个css属性的值，比如position: sticky
- *
- * @param {*} prop
- * @param {*} value
- * @return {*}
- */
-export const isSupportStyleValue = (prop: string, value: string): boolean => {
-  if (isSupportStyleProp(prop)) {
-    const d = document.createElement('div');
-    d.style[prop] = value;
-
-    return !!d.style[prop];
-  }
-
-  return false;
-};
-
-let _passiveIfSupported: boolean | { passive: boolean } = false;
-
-try {
-  isBrowser &&
-    window.addEventListener(
-      'test',
-      null,
-      Object.defineProperty({}, 'passive', {
-        get: function () {
-          _passiveIfSupported = { passive: true };
-        },
-      })
-    );
-} catch (err) {}
-
-/** 是否支持passive事件选项 */
-export const passiveIfSupported = _passiveIfSupported;
-
 export type Dispose = (beforeDispose?: () => Promise<void>) => void;
 
 /**
@@ -166,12 +121,12 @@ const resourceLoadedList = new Set<string>();
  * @param {*} [attrs={}] 额外的属性设置
  * @return {*}  {Promise<void>}
  */
-export const loadResource = (url: string, attrs = {}): Promise<void> => {
+export const loadResource = (url: string, attrs:any = {}): Promise<void> => {
   if (resourceRegex.test(url)) {
     if (!resourceLoadedList.has(url)) {
       resourceLoadedList.add(url);
       return new Promise((resolve, reject) => {
-        let el;
+        let el:any;
         const isCss = cssRegex.test(url);
         if (isCss) {
           el = document.createElement('link');
