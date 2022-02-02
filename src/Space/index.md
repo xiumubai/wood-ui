@@ -1,9 +1,9 @@
 ---
 title: Space 间距
-order: 1
+order: 2
 group:
   title: 布局组件
-  order: 1
+  order: 2
 nav:
   title: '组件'
   path: /components

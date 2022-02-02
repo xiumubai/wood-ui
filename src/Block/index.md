@@ -1,9 +1,9 @@
 ---
 title: Block 布局块
-order: 0
+order: 1
 group:
   title: 布局组件
-  order: 1
+  order: 2
 nav:
   title: '组件'
   path: /components

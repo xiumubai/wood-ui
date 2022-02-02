@@ -1,9 +1,9 @@
 ---
-title: Icon 图标
+title: Modal 弹框
 order: 2
 group:
-  title: 基础组件
-  order: 3
+  title: 操作反馈
+  order: 4
 nav:
   title: '组件'
   path: /components
@@ -11,6 +11,6 @@ nav:
 
 ## Demo
 
-<code src="../../demo/Icon/index.jsx"></code>
+<code src="../../demo/Modal/index.jsx"></code>
 
 <API src="./index.tsx"></API>

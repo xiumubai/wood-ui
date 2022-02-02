@@ -1,10 +1,10 @@
 ---
 title: Avatar 头像
-order: 2
+order: 3
 mobile: true
 group:
   title: 基础组件
-  order: 0
+  order: 3
 nav:
   title: '组件'
   path: /components

@@ -1,9 +1,9 @@
 ---
 title: Spin 加载中
-order: 0
+order: 1
 group:
   title: 操作反馈
-  order: 2
+  order: 4
 nav:
   title: '组件'
   path: /components
