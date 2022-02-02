@@ -27,7 +27,7 @@ const Modal = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { style, className, children, ...rest } = props;
   return (
     <StyledModal
-      className={(clsx('uc-avatar', className))}
+      className={(clsx('uc-modal', className))}
       style={{...style}}
       ref={ref} {...rest}
     >
