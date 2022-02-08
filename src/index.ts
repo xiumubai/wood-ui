@@ -10,5 +10,6 @@ export { default as Avatar } from './Avatar';
 export { default as Divider } from './Divider';
 /** 4.操作反馈 */
 export { default as Spin } from './Spin';
+export { default as Mask } from './Mask';
 export { default as Modal } from './Modal';
 

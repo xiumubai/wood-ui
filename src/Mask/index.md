@@ -1,6 +1,6 @@
 ---
-title: Modal 弹框
-order: 3
+title: Mask 遮罩
+order: 2
 mobile: false
 group:
   title: 操作反馈
@@ -12,6 +12,6 @@ nav:
 
 ## Demo
 
-<code src="../../demo/Modal/index.jsx"></code>
+<code src="../../demo/Mask/index.jsx"></code>
 
 <API src="./index.tsx"></API>
